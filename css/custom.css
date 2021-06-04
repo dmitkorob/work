@@ -80,26 +80,22 @@ header {
 
 }
 
-header .menu-ul {
+header .humburger-menu {
 	display: flex;
+	flex-direction: row;
 	margin: 0px;
-	/*padding: 0px 10px;*/
 }
 
-/*#menu__toggle {
-    opacity: 0;
-  }*/
-
 header .menu-li{
-	font-family: 'NotoSerif-Regular';
+	/*font-family: 'NotoSerif-Regular';*/
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	list-style: none;
-	padding: 20px;
-	border: 3px solid transparent;
-	border-radius: 35px;
-	margin: 0px 10px;
+	/*list-style: none;*/
+	/*padding: 20px;*/
+	/*border: 3px solid transparent;*/
+	/*border-radius: 35px;*/
+	/*margin: 0px 10px;*/
 }
 
 header .menu-li:hover {
@@ -179,15 +175,14 @@ header span {
 
 #city-love .block2 {
 	width: 40%;
-	/*width: 512px;*/
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	/*align-items: flex-start;*/
 }
 
 #city-love .block2 > h1 {
 	font-family: 'NotoSerif-Regular';
+	text-align: center;
 	color: #45C58BFF;
 	font-size: 3.5em;
 	padding: 20px 0px;
@@ -219,13 +214,8 @@ header span {
 	align-items: center;
 }
 
-#keep-in-touch .form-email-input {
-	/*margin: 0px;*/
-	/*padding: 20px;*/
-}
-
 #keep-in-touch .block2 > .form-email {
-	/*height: 80px;*/
+	height: 80px;
 	display: flex;
 	align-items: center;
 	border: 1px solid #7B7B7BFF;
@@ -240,16 +230,17 @@ header span {
 }
 
 #keep-in-touch .e1 {
-	height: 80px;
+	/*height: 80px;*/
+	height: inherit;
 	padding: 20px 100px 20px 20px ;
 	border: 1px solid transparent;
 	border-radius: 7px 0 0 7px;	
 }
 
 #keep-in-touch .e2 {
-	height: 80px;
+	/*height: 80px;*/
 	padding: 0px 20px;
-	/*height: inherit;*/
+	height: inherit;
 	background: #4C7D7AFF;
 	color: #fff;
 	font-size: 3em;
@@ -275,9 +266,34 @@ header span {
 
 /* ----------------------- */
 
-@media screen and (min-width: 360px) and (max-width: 800px) {
+@media screen and (max-width: 900px) {
 
-	
+	/*header .menu-ul {
+		opacity: 0;
+	}*/
+
+	header .menu-ul {
+		flex-direction: column-reverse;
+		align-items: center;
+		visibility: hidden;
+	}
+
+	header .logo {
+		align-items: flex-start;
+	}
+
+	header .humburger-menu {
+		height: 0px;
+	}
+
+	#lets-get-lost {
+		/*font-family: 'NotoSerif-Regular';
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;*/
+		padding: 50px 0px 100px 0px;
+	}
 
 	#lets-get-lost h1 {
 		font-size: 2em;
@@ -285,6 +301,10 @@ header span {
 
 	#lets-get-lost p {
 		text-align: center;
+	}
+
+	#city-love .block2 {
+		width: 80%;
 	}
 
 	#city-love {
@@ -297,4 +317,48 @@ header span {
 		width: 256px;
 		height: 256px;
 	}
+
+	#keep-in-touch .block1 {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	#keep-in-touch .block1 > h1{
+		text-align: center;
+		font-size: 2em;
+		width: 80%;
+	}	
+
+	#keep-in-touch .block1 > p{
+		text-align: center;
+	}	
+
+	#keep-in-touch {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	#keep-in-touch > .block1 {
+		padding: 20px 0px;
+	}
+
+	#keep-in-touch .e1 {
+		/*padding: 20px 100px 20px 20px ;*/
+		padding: 10px;
+		/*height: 30px;*/
+		/*font-size: 1.3em;*/
+	}
+
+	#keep-in-touch .block2 > .form-email {
+		height: 30px;
+	}
+
+	#keep-in-touch .block2  .form-email > .e2 {
+		font-size: 1.3em;
+		padding: 0px 10px;
+	}
+
+
 } 
